@@ -1,0 +1,55 @@
+
+.footer {
+  background: #232127;
+  padding-top: 54px;
+  padding-bottom: 56px;
+  color: #FFFFFF;
+  text-align: center;
+
+  .logo {
+    height: 33px;
+    margin-bottom: 50px;
+
+    path {
+      fill: #FFFFFF;
+    }
+  }
+
+  .sitemapList {
+    list-style: none;
+    display: grid;
+    grid-gap: 40px;
+
+    .sitemapItem {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.25px;
+    }
+
+    .linkList {
+      list-style: none;
+      margin-top: 22px;
+      display: grid;
+      grid-gap: 10px;
+
+      .linkItem {
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 22px;
+        text-align: center;
+        letter-spacing: -0.234375px;
+        color: #BFBFBF;
+      }
+    }
+  }
+
+  .socialList {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 24px;
+    margin-top: 48px;
+  }
+}
