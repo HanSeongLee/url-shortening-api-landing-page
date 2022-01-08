@@ -1,6 +1,7 @@
 import React from "react";
 import styles from './style.module.scss';
 import Container from "../Container";
+import Button from "../Button";
 
 const HeroSection = () => {
     return (
@@ -19,18 +20,23 @@ const HeroSection = () => {
                 <p className={styles.description}>
                     Build your brand’s recognition and get detailed insights on how your links are performing.
                 </p>
-                <button className={styles.getStartedButton}>
+                <Button variants={'rounded-oval'}>
                     Get Started
-                </button>
+                </Button>
 
                 <form className={styles.shortenItForm}>
                     <input className={styles.shortenItInput}
                            type={'text'}
                            placeholder={'Shorten a link here...'}
                     />
-                    <button className={styles.shortenItButton}>
-                        Shorten It!
-                    </button>
+                    <div className={styles.buttonWrapper}>
+                        <Button variants={'round'}
+                                size={'small'}
+                                type={'submit'}
+                        >
+                            Shorten It!
+                        </Button>
+                    </div>
                 </form>
             </Container>
         </section>

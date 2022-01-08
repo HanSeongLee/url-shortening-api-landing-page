@@ -35,19 +35,6 @@
     margin-bottom: 32px;
   }
 
-  .getStartedButton {
-    border: 0;
-    width: 197px;
-    height: 56px;
-    background: #2BD0D0;
-    border-radius: 28px;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 30px;
-    color: #FFFFFF;
-    cursor: pointer;
-  }
-
   .shortenItForm {
     position: absolute;
     left: 50%;
@@ -77,15 +64,8 @@
       outline: none;
     }
 
-    .shortenItButton {
-      height: 48px;
-      background: #2BD0D0;
-      border-radius: 5px;
-      border: 0;
-      font-weight: bold;
-      font-size: 18px;
-      line-height: 27px;
-      color: #FFFFFF;
+    .buttonWrapper {
+      width: 100%;
     }
   }
 }

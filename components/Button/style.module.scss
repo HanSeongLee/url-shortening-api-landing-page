@@ -1,0 +1,30 @@
+.button {
+  width: inherit;
+  background: #2BD0D0;
+  border: 0;
+  font-weight: bold;
+  color: #FFFFFF;
+  padding: 0 40px;
+  cursor: pointer;
+
+  &.round {
+    border-radius: 5px;
+  }
+
+  &.roundedOval {
+    border-radius: 28px;
+  }
+
+  &.large {
+    width: 197px;
+    min-height: 56px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &.small {
+    min-height: 48px;
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
