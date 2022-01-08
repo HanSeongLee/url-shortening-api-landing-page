@@ -1,0 +1,43 @@
+.featureSection {
+  padding-top: 160px;
+  padding-bottom: 80px;
+  text-align: center;
+
+  .title {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: -0.7px;
+    color: #34313D;
+    margin-bottom: 16px;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.109091px;
+    color: #9E9AA8;
+    margin-bottom: 92px;
+  }
+
+  .featureCardContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 92px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      content: '';
+      background: #2BD0D0;
+      width: 8px;
+      height: 100%;
+    }
+  }
+}

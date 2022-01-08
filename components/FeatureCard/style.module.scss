@@ -1,0 +1,39 @@
+.featureCard {
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 5px;
+  padding: 72px 32px 32px;
+  max-width: 327px;
+  min-height: 267px;
+
+  .iconWrapper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 88px;
+    height: 88px;
+    background: #3A3054;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 33px;
+    text-align: center;
+    color: #34313D;
+    margin-bottom: 12px;
+  }
+
+  .description {
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 26px;
+    text-align: center;
+    color: #9E9AA8;
+  }
+}

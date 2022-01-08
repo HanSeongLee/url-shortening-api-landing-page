@@ -1,7 +1,9 @@
 import Head from 'next/head';
+import styles from './style.module.scss';
 import Header from "../components/Header";
 import Container from "../components/Container";
 import HeroSection from "../components/HeroSection";
+import FeatureSection from "../components/FeatureSection";
 
 export default function Home() {
   return (
@@ -59,8 +61,9 @@ export default function Home() {
           <Header/>
         </Container>
 
-        <main>
+        <main className={styles.main}>
           <HeroSection/>
+          <FeatureSection/>
         </main>
       </>
   );
