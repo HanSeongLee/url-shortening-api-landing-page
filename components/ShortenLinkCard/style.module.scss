@@ -1,8 +1,16 @@
+@import "styles/utils";
 
 .shortenLinkCard {
   background: #FFFFFF;
   border-radius: 5px;
   text-align: left;
+
+  @include media(">desktop") {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+  }
 
   .originalLink {
     font-size: 16px;
@@ -12,18 +20,53 @@
     padding: 6px 16px 8px;
 
     border-bottom: 1px solid rgba(158, 154, 168, 0.25);
+
+    @include media(">desktop") {
+      font-size: 20px;
+      line-height: 36px;
+      letter-spacing: 0.15px;
+      padding: 0;
+      border-bottom: none;
+    }
   }
 
-  .shortenItLink {
-    font-size: 16px;
-    line-height: 36px;
-    letter-spacing: 0.12px;
-    color: #2BD0D0;
-    padding: 6px 16px 8px;
-  }
+  .rightSide {
+    @include media(">desktop") {
+      display: flex;
+      align-items: center;
+    }
 
-  .copyButtonWrapper {
-    width: 100%;
-    padding: 0 16px 16px;
+    .shortenItLink {
+      font-size: 16px;
+      line-height: 36px;
+      letter-spacing: 0.12px;
+      color: #2BD0D0;
+      padding: 6px 16px 8px;
+
+      @include media(">desktop") {
+        font-size: 20px;
+        line-height: 36px;
+        letter-spacing: 0.15px;
+        padding: 0;
+        margin-right: 24px;
+      }
+    }
+
+    .copyButtonWrapper {
+      width: 100%;
+      padding: 0 16px 16px;
+
+      @include media(">desktop") {
+        padding: 0;
+
+        > button {
+          font-size: 15px;
+          line-height: 22px;
+          padding: 0;
+          width: 103px;
+          height: 40px;
+        }
+      }
+    }
   }
 }

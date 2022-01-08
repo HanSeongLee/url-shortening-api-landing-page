@@ -16,7 +16,7 @@ const ShortenItForm = () => {
         <form className={styles.shortenItForm}
               onInvalid={onInvalid}
         >
-            <div>
+            <div className={styles.inputWrapper}>
                 <input className={cn(styles.shortenItInput, {
                     [styles.error]: error,
                 })}
@@ -25,7 +25,7 @@ const ShortenItForm = () => {
                        required
                 />
                 {error && (
-                    <div className={styles.error}>
+                    <div className={styles.errorMessage}>
                         Please add a link
                     </div>
                 )}

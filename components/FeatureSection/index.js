@@ -34,6 +34,9 @@ const FeatureSection = () => {
                 {/*    <ShortenLinkCard link={'https://www.frontendmentor.io'}*/}
                 {/*                     shortenLink={'https://rel.ink/k4lKyk\t'}*/}
                 {/*    />*/}
+                {/*    <ShortenLinkCard link={'https://www.frontendmentor.io'}*/}
+                {/*                     shortenLink={'https://rel.ink/k4lKyk\t'}*/}
+                {/*    />*/}
                 {/*</div>*/}
             </Container>
 
@@ -41,9 +44,11 @@ const FeatureSection = () => {
                 <h3 className={styles.title}>
                     Advanced Statistics
                 </h3>
-                <p className={styles.description}>
-                    Track how your links are performing across the web with our advanced statistics dashboard.
-                </p>
+                <div className={styles.descriptionWrapper}>
+                    <p className={styles.description}>
+                        Track how your links are performing across the web with our advanced statistics dashboard.
+                    </p>
+                </div>
 
                 <div className={styles.featureCardContainer}>
                     {features?.map((feature) => (

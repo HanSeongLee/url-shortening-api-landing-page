@@ -17,25 +17,27 @@ const ShortenLinkCard = ({ link, shortenLink }) => {
             <div className={styles.originalLink}>
                 {link}
             </div>
-            <div className={styles.shortenItLink}>
-                {shortenLink}
-            </div>
-            <div className={styles.copyButtonWrapper}>
-                {!copied ? (
-                    <Button variants={'round'}
-                            size={'small'}
-                            onClick={onCopy}
-                    >
-                        Copy
-                    </Button>
-                ) : (
-                    <Button variants={'round'}
-                            size={'small'}
-                            disabled
-                    >
-                        Copied!
-                    </Button>
-                )}
+            <div className={styles.rightSide}>
+                <div className={styles.shortenItLink}>
+                    {shortenLink}
+                </div>
+                <div className={styles.copyButtonWrapper}>
+                    {!copied ? (
+                        <Button variants={'round'}
+                                size={'small'}
+                                onClick={onCopy}
+                        >
+                            Copy
+                        </Button>
+                    ) : (
+                        <Button variants={'round'}
+                                size={'small'}
+                                disabled
+                        >
+                            Copied!
+                        </Button>
+                    )}
+                </div>
             </div>
         </div>
     );
