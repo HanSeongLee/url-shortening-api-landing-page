@@ -1,8 +1,15 @@
+@import "styles/utils";
+
 .ctaSection {
   text-align: center;
   padding: 90px 0;
   background: #3A3054 url("/img/bg-boost-mobile.svg") no-repeat;
   background-size: cover;
+
+  @include media(">desktop") {
+    background: #3A3054 url("/img/bg-boost-desktop.svg") no-repeat;
+    background-size: cover;
+  }
 
   .title {
     font-weight: bold;
@@ -11,5 +18,12 @@
     letter-spacing: -0.7px;
     color: #FFFFFF;
     margin-bottom: 16px;
+
+    @include media(">desktop") {
+      font-size: 40px;
+      line-height: 48px;
+      letter-spacing: -1px;
+      margin-bottom: 32px;
+    }
   }
 }
