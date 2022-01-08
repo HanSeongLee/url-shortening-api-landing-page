@@ -1,17 +1,33 @@
+@import "styles/utils";
 
 .footer {
   background: #232127;
   padding-top: 54px;
   padding-bottom: 56px;
   color: #FFFFFF;
-  text-align: center;
 
-  .logo {
-    height: 33px;
-    margin-bottom: 50px;
+  .content {
+    text-align: center;
 
-    path {
-      fill: #FFFFFF;
+    @include media(">desktop") {
+      display: flex;
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+
+  .logoWrapper {
+    @include media(">desktop") {
+      flex: 1;
+    }
+
+    .logo {
+      height: 33px;
+      margin-bottom: 50px;
+
+      path {
+        fill: #FFFFFF;
+      }
     }
   }
 
@@ -19,6 +35,11 @@
     list-style: none;
     display: grid;
     grid-gap: 40px;
+
+    @include media(">desktop") {
+      display: flex;
+      grid-gap: 110px;
+    }
 
     .sitemapItem {
       font-weight: bold;
@@ -37,9 +58,18 @@
         font-weight: normal;
         font-size: 15px;
         line-height: 22px;
-        text-align: center;
         letter-spacing: -0.234375px;
         color: #BFBFBF;
+
+        a {
+          @include media(">desktop") {
+            transition: 0.3s;
+
+            &:hover {
+              color: #2BD0D0;
+            }
+          }
+        }
       }
     }
   }
@@ -51,5 +81,20 @@
     justify-content: center;
     grid-gap: 24px;
     margin-top: 48px;
+
+    @include media(">desktop") {
+      margin-top: 0;
+      margin-left: 101px;
+
+      svg path {
+        transition: 0.3s;
+      }
+
+      a:hover {
+        svg path {
+            fill: #2BD0D0;
+        }
+      }
+    }
   }
 }

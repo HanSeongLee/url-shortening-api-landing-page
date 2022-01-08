@@ -6,6 +6,7 @@ import FacebookIcon from '/public/icons/icon-facebook.svg';
 import TwitterIcon from '/public/icons/icon-twitter.svg';
 import PinterestIcon from '/public/icons/icon-pinterest.svg';
 import InstagramIcon from '/public/icons/icon-instagram.svg';
+import Container from "../Container";
 
 const sitemap = [
     {
@@ -91,47 +92,53 @@ const socials = [
 const Footer = () => {
     return (
         <footer className={styles.footer}>
-            <Link href={'/'}>
-                <a aria-label={'shortly'}>
-                    <Logo className={styles.logo}/>
-                </a>
-            </Link>
+            <Container>
+                <div className={styles.content}>
+                    <div className={styles.logoWrapper}>
+                        <Link href={'/'}>
+                            <a aria-label={'shortly'}>
+                                <Logo className={styles.logo}/>
+                            </a>
+                        </Link>
+                    </div>
 
-            <ul className={styles.sitemapList}>
-                {sitemap?.map(({title, items}) => (
-                    <li className={styles.sitemapItem}
-                        key={title}
-                    >
-                        {title}
-                        <ul className={styles.linkList}>
-                            {items?.map(({name, link}) => (
-                                <li className={styles.linkItem}
-                                    key={name}
+                    <ul className={styles.sitemapList}>
+                        {sitemap?.map(({title, items}) => (
+                            <li className={styles.sitemapItem}
+                                key={title}
+                            >
+                                {title}
+                                <ul className={styles.linkList}>
+                                    {items?.map(({name, link}) => (
+                                        <li className={styles.linkItem}
+                                            key={name}
+                                        >
+                                            <Link href={link}>
+                                                <a>
+                                                    {name}
+                                                </a>
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </li>
+                        ))}
+                    </ul>
+
+                    <ul className={styles.socialList}>
+                        {socials.map(({name, icon, link}) => (
+                            <li key={name}>
+                                <a href={link}
+                                   target={'_blank'}
+                                   aria-label={name}
                                 >
-                                    <Link href={link}>
-                                        <a>
-                                            {name}
-                                        </a>
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </li>
-                ))}
-            </ul>
-
-            <ul className={styles.socialList}>
-                {socials.map(({name, icon, link}) => (
-                    <li key={name}>
-                        <a href={link}
-                           target={'_blank'}
-                           aria-label={name}
-                        >
-                            {icon}
-                        </a>
-                    </li>
-                ))}
-            </ul>
+                                    {icon}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </Container>
         </footer>
     );
 };
