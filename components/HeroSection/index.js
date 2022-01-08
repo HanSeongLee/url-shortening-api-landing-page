@@ -2,7 +2,6 @@ import React from "react";
 import styles from './style.module.scss';
 import Container from "../Container";
 import Button from "../Button";
-import ShortenItForm from "../ShortenItForm";
 
 const HeroSection = () => {
     return (
@@ -15,17 +14,17 @@ const HeroSection = () => {
             </div>
 
             <Container>
-                <h2 className={styles.title}>
-                    More than just shorter links
-                </h2>
-                <p className={styles.description}>
-                    Build your brand’s recognition and get detailed insights on how your links are performing.
-                </p>
-                <Button variants={'rounded-oval'}>
-                    Get Started
-                </Button>
-
-                <ShortenItForm />
+                <div className={styles.content}>
+                    <h2 className={styles.title}>
+                        More than just shorter links
+                    </h2>
+                    <p className={styles.description}>
+                        Build your brand’s recognition and get detailed insights on how your links are performing.
+                    </p>
+                    <Button variants={'rounded-oval'}>
+                        Get Started
+                    </Button>
+                </div>
             </Container>
         </section>
     );

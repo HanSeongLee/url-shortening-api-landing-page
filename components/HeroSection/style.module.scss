@@ -1,18 +1,47 @@
+@import "styles/utils";
 
 .heroSection {
   position: relative;
   text-align: center;
   padding-bottom: 168px;
+  overflow: hidden;
+
+  @include media(">desktop") {
+    padding-top: 139px;
+  }
 
   .heroImageWrapper {
     width: 100%;
-    overflow: hidden;
     margin-bottom: 37px;
     padding-left: 24px;
+
+    @include media(">desktop") {
+      position: absolute;
+      top: 45%;
+      right: -123px;
+      width: 733px;
+      height: 482px;
+      transform: translateY(-50%);
+      padding: 0;
+      margin-bottom: 0;
+    }
 
     .heroImage {
       width: 511px;
       height: auto;
+
+      @include media(">desktop") {
+        width: 733px;
+      }
+    }
+  }
+
+  .content {
+    text-align: center;
+
+    @include media(">desktop") {
+      width: 564px;
+      text-align: left;
     }
   }
 
@@ -20,19 +49,31 @@
     font-weight: bold;
     font-size: 42px;
     line-height: 48px;
-    text-align: center;
     letter-spacing: -1.05px;
     color: #34313D;
     margin-bottom: 15px;
+
+    @include media(">desktop") {
+      font-size: 80px;
+      line-height: 90px;
+      letter-spacing: -2px;
+      margin-bottom: 5px;
+    }
   }
 
   .description {
     font-size: 18px;
     line-height: 30px;
-    text-align: center;
     letter-spacing: 0.122727px;
     color: #9E9AA8;
     margin-bottom: 32px;
+
+    @include media(">desktop") {
+      font-size: 22px;
+      line-height: 36px;
+      letter-spacing: 0.15px;
+      margin-bottom: 38px;
+    }
   }
 
   .shortenItForm {

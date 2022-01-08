@@ -1,7 +1,14 @@
 .featureSection {
+  position: relative;
   padding-top: 80px;
   padding-bottom: 80px;
   text-align: center;
+
+  .shortenItFormWrapper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+  }
 
   .shortenLinkCardContainer {
     display: grid;
