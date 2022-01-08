@@ -1,0 +1,58 @@
+
+.shortenItForm {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) translateY(50%);
+  width: 327px;
+
+  display: grid;
+  grid-gap: 16px;
+  background: #3A3054 url("/img/bg-shorten-mobile.svg") no-repeat;
+  background-position: top right;
+  border-radius: 10px;
+  padding: 24px;
+
+  .shortenItInput {
+    border: 0;
+    border-radius: 5px;
+    width: 100%;
+    max-width: initial;
+    height: 48px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 36px;
+    letter-spacing: 0.12px;
+    color: rgba(52, 49, 61, 0.5);
+    padding: 6px 16px;
+    outline: none;
+
+    &.error {
+      font-style: normal;
+      font-size: 16px;
+      line-height: 36px;
+      letter-spacing: 0.12px;
+      color: rgba(244, 99, 99, 0.5);
+      border: 3px solid #F46363;
+
+      &::placeholder {
+        color: inherit;
+      }
+    }
+  }
+
+  .error {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.0818182px;
+    color: #F46363;
+    margin-top: 4px;
+    text-align: left;
+  }
+
+  .buttonWrapper {
+    width: 100%;
+  }
+}
