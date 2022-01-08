@@ -1,0 +1,29 @@
+
+.shortenLinkCard {
+  background: #FFFFFF;
+  border-radius: 5px;
+  text-align: left;
+
+  .originalLink {
+    font-size: 16px;
+    line-height: 36px;
+    letter-spacing: 0.12px;
+    color: #34313D;
+    padding: 6px 16px 8px;
+
+    border-bottom: 1px solid rgba(158, 154, 168, 0.25);
+  }
+
+  .shortenItLink {
+    font-size: 16px;
+    line-height: 36px;
+    letter-spacing: 0.12px;
+    color: #2BD0D0;
+    padding: 6px 16px 8px;
+  }
+
+  .copyButtonWrapper {
+    width: 100%;
+    padding: 0 16px 16px;
+  }
+}

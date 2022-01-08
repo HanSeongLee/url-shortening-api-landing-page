@@ -31,7 +31,7 @@ const HeroSection = () => {
                     />
                     <div className={styles.buttonWrapper}>
                         <Button variants={'round'}
-                                size={'small'}
+                                size={'normal'}
                                 type={'submit'}
                         >
                             Shorten It!

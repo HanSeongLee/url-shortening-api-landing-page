@@ -2,6 +2,7 @@ import React from "react";
 import styles from './style.module.scss';
 import Container from "../Container";
 import FeatureCard from "../FeatureCard";
+import ShortenLinkCard from "../ShortenLinkCard";
 
 const features = [
     {
@@ -24,6 +25,14 @@ const features = [
 const FeatureSection = () => {
     return (
         <section className={styles.featureSection}>
+            <Container>
+                {/*<div className={styles.shortenLinkCardContainer}>*/}
+                {/*    <ShortenLinkCard link={'https://www.frontendmentor.io'}*/}
+                {/*                     shortenLink={'https://rel.ink/k4lKyk\t'}*/}
+                {/*    />*/}
+                {/*</div>*/}
+            </Container>
+
             <Container>
                 <h3 className={styles.title}>
                     Advanced Statistics

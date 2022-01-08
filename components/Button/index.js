@@ -9,6 +9,7 @@ const Button = ({ variants = 'round', size = 'large', children, ...props }) => {
             [styles.roundedOval]: variants === 'rounded-oval',
 
             [styles.large]: size === 'large',
+            [styles.normal]: size === 'normal',
             [styles.small]: size === 'small',
         })}
                 {...props}

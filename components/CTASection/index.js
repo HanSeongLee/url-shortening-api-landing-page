@@ -9,7 +9,7 @@ const CTASection = () => {
                 Boost your links today
             </h2>
             <Button variants={'rounded-oval'}
-                    size={'small'}
+                    size={'large'}
             >
                 Get Started
             </Button>
