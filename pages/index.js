@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Header from "../components/Header";
 import Container from "../components/Container";
+import HeroSection from "../components/HeroSection";
 
 export default function Home() {
   return (
@@ -59,6 +60,7 @@ export default function Home() {
         </Container>
 
         <main>
+          <HeroSection/>
         </main>
       </>
   );

@@ -1,0 +1,91 @@
+
+.heroSection {
+  position: relative;
+  text-align: center;
+  padding-bottom: 168px;
+
+  .heroImageWrapper {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 37px;
+    padding-left: 24px;
+
+    .heroImage {
+      width: 511px;
+      height: auto;
+    }
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: -1.05px;
+    color: #34313D;
+    margin-bottom: 15px;
+  }
+
+  .description {
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.122727px;
+    color: #9E9AA8;
+    margin-bottom: 32px;
+  }
+
+  .getStartedButton {
+    border: 0;
+    width: 197px;
+    height: 56px;
+    background: #2BD0D0;
+    border-radius: 28px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+
+  .shortenItForm {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) translateY(50%);
+    width: 327px;
+
+    display: grid;
+    grid-gap: 16px;
+    background: #3A3054 url("/img/bg-shorten-mobile.svg") no-repeat;
+    background-position: top right;
+    border-radius: 10px;
+    padding: 24px;
+
+    .shortenItInput {
+      border: 0;
+      border-radius: 5px;
+      width: 100%;
+      max-width: initial;
+      height: 48px;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 36px;
+      letter-spacing: 0.12px;
+      color: rgba(52, 49, 61, 0.5);
+      padding: 6px 16px;
+      outline: none;
+    }
+
+    .shortenItButton {
+      height: 48px;
+      background: #2BD0D0;
+      border-radius: 5px;
+      border: 0;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 27px;
+      color: #FFFFFF;
+    }
+  }
+}
