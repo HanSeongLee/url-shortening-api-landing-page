@@ -59,16 +59,14 @@ export default function Home() {
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png"/>
         </Head>
 
-        <Container>
-          <Header/>
-        </Container>
+        <Header/>
 
         <main className={styles.main}>
           <HeroSection/>
           <FeatureSection/>
-          <CTASection />
+          <CTASection/>
 
-          <Footer />
+          <Footer/>
         </main>
       </>
   );
