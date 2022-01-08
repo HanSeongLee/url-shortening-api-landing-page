@@ -27,6 +27,8 @@
     opacity: 0;
     max-height: 0;
     transition: 0.5s;
+    outline: none;
+    z-index: 1;
 
     &.open {
       transform: translateY(0);
