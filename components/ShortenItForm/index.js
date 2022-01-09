@@ -1,20 +1,14 @@
-import React, {useCallback, useState} from "react";
+import React from "react";
 import styles from './style.module.scss';
 import Button from "../Button";
 import cn from "classnames";
 
-const ShortenItForm = () => {
-    const [error, setError] = useState(false);
-
-    const onInvalid = useCallback((e) => {
-        const { validationMessage } = e.target;
-        setError(!!validationMessage);
-        e.preventDefault();
-    }, []);
+const ShortenItForm = ({ onSubmit, onInvalid, error }) => {
 
     return (
         <form className={styles.shortenItForm}
               onInvalid={onInvalid}
+              onSubmit={onSubmit}
         >
             <div className={styles.inputWrapper}>
                 <input className={cn(styles.shortenItInput, {
@@ -22,11 +16,12 @@ const ShortenItForm = () => {
                 })}
                        type={'text'}
                        placeholder={'Shorten a link here...'}
+                       name={'url'}
                        required
                 />
                 {error && (
                     <div className={styles.errorMessage}>
-                        Please add a link
+                        {error}
                     </div>
                 )}
             </div>

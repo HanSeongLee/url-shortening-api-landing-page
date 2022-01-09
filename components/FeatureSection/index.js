@@ -4,6 +4,7 @@ import Container from "../Container";
 import FeatureCard from "../FeatureCard";
 import ShortenLinkCard from "../ShortenLinkCard";
 import ShortenItForm from "../ShortenItForm";
+import ShortenItFormContainer from "../../containers/ShortenItFormContainer";
 
 const features = [
     {
@@ -28,7 +29,7 @@ const FeatureSection = () => {
         <section className={styles.featureSection}>
             <Container>
                 <div className={styles.shortenItFormWrapper}>
-                    <ShortenItForm/>
+                    <ShortenItFormContainer />
                 </div>
                 {/*<div className={styles.shortenLinkCardContainer}>*/}
                 {/*    <ShortenLinkCard link={'https://www.frontendmentor.io'}*/}
