@@ -2,24 +2,24 @@ import React, {useCallback, useState} from "react";
 import styles from './style.module.scss';
 import Button from "../Button";
 
-const ShortenLinkCard = ({ link, shortenLink }) => {
+const ShortenLinkCard = ({ link, shortLink }) => {
     const [copied, setCopied] = useState(false);
 
     const onCopy = useCallback(async () => {
-        await navigator.clipboard.writeText(shortenLink);
+        await navigator.clipboard.writeText(shortLink);
         setCopied(true);
-    }, [shortenLink]);
+    }, [shortLink]);
 
     return (
         <div className={styles.shortenLinkCard}
-             key={shortenLink}
+             key={shortLink}
         >
             <div className={styles.originalLink}>
                 {link}
             </div>
             <div className={styles.rightSide}>
                 <div className={styles.shortenItLink}>
-                    {shortenLink}
+                    {shortLink}
                 </div>
                 <div className={styles.copyButtonWrapper}>
                     {!copied ? (

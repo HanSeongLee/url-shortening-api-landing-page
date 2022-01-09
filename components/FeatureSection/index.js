@@ -2,9 +2,8 @@ import React from "react";
 import styles from './style.module.scss';
 import Container from "../Container";
 import FeatureCard from "../FeatureCard";
-import ShortenLinkCard from "../ShortenLinkCard";
-import ShortenItForm from "../ShortenItForm";
 import ShortenItFormContainer from "../../containers/ShortenItFormContainer";
+import ShortenLinkCardContainer from "../../containers/ShortenLinkCardContainer";
 
 const features = [
     {
@@ -31,14 +30,9 @@ const FeatureSection = () => {
                 <div className={styles.shortenItFormWrapper}>
                     <ShortenItFormContainer />
                 </div>
-                {/*<div className={styles.shortenLinkCardContainer}>*/}
-                {/*    <ShortenLinkCard link={'https://www.frontendmentor.io'}*/}
-                {/*                     shortenLink={'https://rel.ink/k4lKyk\t'}*/}
-                {/*    />*/}
-                {/*    <ShortenLinkCard link={'https://www.frontendmentor.io'}*/}
-                {/*                     shortenLink={'https://rel.ink/k4lKyk\t'}*/}
-                {/*    />*/}
-                {/*</div>*/}
+                <div className={styles.shortenLinkCardContainer}>
+                    <ShortenLinkCardContainer />
+                </div>
             </Container>
 
             <Container>
