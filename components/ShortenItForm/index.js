@@ -3,7 +3,7 @@ import styles from './style.module.scss';
 import Button from "../Button";
 import cn from "classnames";
 
-const ShortenItForm = ({ onSubmit, onInvalid, error }) => {
+const ShortenItForm = ({ onSubmit, onInvalid, onChange, error }) => {
 
     return (
         <form className={styles.shortenItForm}
@@ -18,6 +18,7 @@ const ShortenItForm = ({ onSubmit, onInvalid, error }) => {
                        placeholder={'Shorten a link here...'}
                        name={'url'}
                        required
+                       onChange={onChange}
                 />
                 {error && (
                     <div className={styles.errorMessage}>

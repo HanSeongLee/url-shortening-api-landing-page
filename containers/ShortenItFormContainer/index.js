@@ -1,21 +1,33 @@
 import React, {useCallback, useState} from "react";
 import ShortenItForm from "../../components/ShortenItForm";
 import {useAppContext} from "../../context/AppContext";
+import axios from "axios";
 
 const ShortenItFormContainer = () => {
     const [error, setError] = useState('');
     const [_, dispatch] = useAppContext();
 
-    const onSubmit = useCallback((e) => {
-        const link = e.target.url.value;
+    const onSubmit = useCallback(async (e) => {
+        e.preventDefault();
+        const urlInput = e.target.url;
+        const {value: link} = urlInput;
         setError('');
 
-        // dispatch({ type: 'add_link', value: {
-        //         link,
-        //         shortLink: "https:\/\/shrtco.de\/test",
-        //     },
-        // });
-        e.preventDefault();
+        try {
+            const {data} = await axios.post(`https://api.shrtco.de/v2/shorten?url=${link}`);
+            const {result} = data;
+
+            dispatch({ type: 'add_link', value: {
+                    link: result.original_link,
+                    shortLink: result.full_short_link,
+                },
+            });
+            urlInput.value = '';
+        } catch (e) {
+            const {data} = e.response;
+            setError(data.error);
+        }
+
     }, []);
 
     const onInvalid = useCallback((e) => {
@@ -24,10 +36,15 @@ const ShortenItFormContainer = () => {
         e.preventDefault();
     }, []);
 
+    const onChange = useCallback(() => {
+        setError('');
+    }, []);
+
     return (
         <ShortenItForm onSubmit={onSubmit}
                        onInvalid={onInvalid}
                        error={error}
+                       onChange={onChange}
         />
     );
 };
