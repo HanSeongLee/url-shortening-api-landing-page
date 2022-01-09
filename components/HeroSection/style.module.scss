@@ -8,6 +8,7 @@
 
   @include media(">desktop") {
     padding-top: 139px;
+    padding-bottom: 210px;
   }
 
   .heroImageWrapper {
@@ -17,7 +18,7 @@
 
     @include media(">desktop") {
       position: absolute;
-      top: 45%;
+      top: 40%;
       right: -123px;
       width: 733px;
       height: 482px;
